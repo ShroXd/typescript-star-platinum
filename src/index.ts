@@ -1,1 +1,1 @@
-console.log("ストーン・フリー!");
+console.log('ストーン・フリー!')
