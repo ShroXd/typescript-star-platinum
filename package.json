@@ -33,12 +33,7 @@
   "release": {
     "plugins": [
       "@semantic-release/commit-analyzer",
-      [
-        "@semantic-release/npm",
-        {
-          "pkgRoot": "dist"
-        }
-      ]
+      "@semantic-release/npm"
     ]
   },
   "license": "MIT"
