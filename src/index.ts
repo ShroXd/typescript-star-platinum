@@ -1,1 +1,1 @@
-console.log('ストーン・フリー!')
+export const hello = () => 'ストーン・フリー!'
