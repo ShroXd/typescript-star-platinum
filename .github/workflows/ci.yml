@@ -11,7 +11,7 @@ jobs:
     steps:
       # check out repository code and setup node
       - uses: actions/checkout@v1
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v2
         with:
           node-version: "14.x"
       # install dependencies and run semantic-release
