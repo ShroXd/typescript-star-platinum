@@ -15,7 +15,8 @@ jobs:
         with:
           node-version: "14.x"
       # install dependencies and run semantic-release
-      - run: npm ci
+      - run: npm i -g pnpm
+      - run: pnpm i
       - run: npx semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
