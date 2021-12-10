@@ -10,9 +10,7 @@
 				{"scope": "no-release", "release": false}
 			]
 		}],
-		["@semantic-release/npm", {
-      "pkgRoot": "dist"
-    }],
+		"@semantic-release/npm",
 		"@semantic-release/release-notes-generator"
 	]
 }
