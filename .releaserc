@@ -6,10 +6,11 @@
 			"releaseRules": [
 				{"type": "docs", "scope": "README", "release": "patch"},
 				{"type": "refactor", "scope": "core-*", "release": "minor"},
-				{"type": "refactor", "release": "patch"},
+				{"type": "refactor", "release": "major"},
 				{"scope": "no-release", "release": false}
 			]
 		}],
-		"@semantic-release/release-notes-generator"
+		"@semantic-release/release-notes-generator",
+		"@semantic-release/npm"
 	]
 }
