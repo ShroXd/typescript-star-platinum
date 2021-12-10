@@ -1,1 +1,1 @@
-export const hello = () => 'ストーン・フリー!'
+export const hello = () => 'ストーン・フリー!!'
