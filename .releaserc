@@ -1,0 +1,16 @@
+{
+  "branches": ["main"],
+	"plugins": [
+		["@semantic-release/commit-analyzer", {
+			"preset": "angular",
+			"releaseRules": [
+				{"type": "docs", "scope": "README", "release": "patch"},
+				{"type": "refactor", "scope": "core-*", "release": "minor"},
+				{"type": "refactor", "release": "major"},
+				{"scope": "no-release", "release": false}
+			]
+		}],
+		"@semantic-release/npm",
+		"@semantic-release/release-notes-generator"
+	]
+}
