@@ -36,22 +36,7 @@
       [
         "@semantic-release/npm",
         {
-          "pkgRoot": "dist/ng-library/"
-        }
-      ],
-      "@semantic-release/release-notes-generator",
-      [
-        "@semantic-release/changelog",
-        {
-          "changelogFile": "CHANGELOG.md"
-        }
-      ],
-      [
-        "@semantic-release/git",
-        {
-          "assets": [
-            "CHANGELOG.md"
-          ]
+          "pkgRoot": "dist"
         }
       ]
     ]
