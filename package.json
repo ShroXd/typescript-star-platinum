@@ -30,48 +30,5 @@
     "tsup": "^5.10.3",
     "typescript": "^4.5.2"
   },
-  "release": {
-    "branches": [
-      "main",
-      "next"
-    ],
-    "plugins": [
-      [
-        "@semantic-release/commit-analyzer",
-        {
-          "preset": "angular",
-          "releaseRules": [
-            {
-              "breaking": true,
-              "release": "major"
-            },
-            {
-              "revert": true,
-              "release": "patch"
-            },
-            {
-              "type": "feat",
-              "release": "minor"
-            },
-            {
-              "type": "fix",
-              "release": "patch"
-            },
-            {
-              "type": "perf",
-              "release": "patch"
-            }
-          ],
-          "parserOpts": {
-            "noteKeywords": [
-              "BREAKING CHANGE",
-              "BREAKING CHANGES"
-            ]
-          }
-        }
-      ],
-      "@semantic-release/npm"
-    ]
-  },
   "license": "MIT"
 }
