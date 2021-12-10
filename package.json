@@ -1,5 +1,5 @@
 {
-  "name": "ts-lib-template",
+  "name": "typescript-star-platinum",
   "version": "0.0.0",
   "description": "ストーン・フリー!",
   "scripts": {
@@ -25,9 +25,53 @@
     "jest": "^27.4.4",
     "lint-staged": "^12.1.2",
     "prettier": "^2.5.1",
+    "semantic-release": "^18.0.1",
     "ts-jest": "^27.1.1",
     "tsup": "^5.10.3",
     "typescript": "^4.5.2"
+  },
+  "release": {
+    "branches": [
+      "main",
+      "next"
+    ],
+    "plugins": [
+      [
+        "@semantic-release/commit-analyzer",
+        {
+          "preset": "angular",
+          "releaseRules": [
+            {
+              "breaking": true,
+              "release": "major"
+            },
+            {
+              "revert": true,
+              "release": "patch"
+            },
+            {
+              "type": "feat",
+              "release": "minor"
+            },
+            {
+              "type": "fix",
+              "release": "patch"
+            },
+            {
+              "type": "perf",
+              "release": "patch"
+            }
+          ],
+          "parserOpts": {
+            "noteKeywords": [
+              "BREAKING CHANGE",
+              "BREAKING CHANGES"
+            ]
+          }
+        }
+      ],
+      "@semantic-release/npm"
+    ]
   },
   "license": "MIT"
 }
