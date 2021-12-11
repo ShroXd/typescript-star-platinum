@@ -1,4 +1,5 @@
-name: Release
+name: Star Platinum
+
 on:
   push:
     branches:
