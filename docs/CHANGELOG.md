@@ -1,3 +1,10 @@
+# [2.4.0](https://github.com/ShroXd/typescript-star-platinum/compare/v2.3.1...v2.4.0) (2021-12-11)
+
+
+### Features
+
+* 🎸 create ci for other branches ([d7a13db](https://github.com/ShroXd/typescript-star-platinum/commit/d7a13db32dc0dde123f0a9587b711f901383163e))
+
 ## [2.3.1](https://github.com/ShroXd/typescript-star-platinum/compare/v2.3.0...v2.3.1) (2021-12-11)
 
 
