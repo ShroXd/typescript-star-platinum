@@ -5,22 +5,77 @@ on:
       - main
 
 jobs:
-  release:
-    name: release
+  test:
+    name: test
     runs-on: ubuntu-latest
     steps:
       # check out repository code and setup node
-      - uses: actions/checkout@v1
-      - uses: actions/setup-node@v1
+      - uses: actions/checkout@v2
+      - uses: pnpm/action-setup@646cdf48217256a3d0b80361c5a50727664284f2
+        with:
+          version: 6.10.0
+      - uses: actions/setup-node@v2
         with:
           node-version: '14.x'
-      # install dependencies and run semantic-release
-      - run: npm i -g pnpm
+          cache: 'pnpm'
+
+      - run: pnpm i
+      # TODO unit test
+
+  build:
+    name: build
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+      # check out repository code and setup node
+      - uses: actions/checkout@v2
+      - uses: pnpm/action-setup@646cdf48217256a3d0b80361c5a50727664284f2
+        with:
+          version: 6.10.0
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14.x'
+      # install dependencies and build
       - run: pnpm i
       - run: mkdir ./dist/
       - run: cp -r package.json ./dist/
+      - run: cp -r .releaserc ./dist/
       - run: pnpm run build
-      - run: npx semantic-release
+      - run: ls
+      - run: ls ./dist
+
+      - name: upload build result
+        uses: actions/upload-artifact@v2
+        with:
+          name: bundle
+          path: dist
+
+  release:
+    name: release
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      # check out repository code and setup node
+      - uses: actions/checkout@v2
+      - uses: pnpm/action-setup@646cdf48217256a3d0b80361c5a50727664284f2
+        with:
+          version: 6.10.0
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14.x'
+
+      - name: download build result
+        uses: actions/download-artifact@v2
+        with:
+          name: bundle
+          path: dist
+
+      - run: pnpm add -g semantic-release
+      - run: pnpm add -g @semantic-release/changelog
+      - run: pnpm add -g @semantic-release/git
+      - run: ls
+      - run: ls ./dist
+      - run: semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
