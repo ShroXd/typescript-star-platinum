@@ -28,6 +28,10 @@
           {
             "type": "perf",
             "release": "patch"
+          },
+          {
+            "type": "refactor",
+            "release": "patch"
           }
         ],
         "parserOpts": {

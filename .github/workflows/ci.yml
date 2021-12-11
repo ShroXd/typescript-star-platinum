@@ -27,7 +27,6 @@ jobs:
     runs-on: ubuntu-latest
     needs: test
     steps:
-      # check out repository code and setup node
       - uses: actions/checkout@v2
       - uses: pnpm/action-setup@646cdf48217256a3d0b80361c5a50727664284f2
         with:
@@ -35,14 +34,14 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '14.x'
-      # install dependencies and build
-      - run: pnpm i
-      - run: mkdir ./dist/
-      - run: cp -r package.json ./dist/
-      - run: cp -r .releaserc ./dist/
-      - run: pnpm run build
-      - run: ls
-      - run: ls ./dist
+
+      - name: install dependencies and build
+        run: |
+          pnpm i
+          mkdir ./dist
+          cp package.json ./dist
+          cp -r .releaserc ./dist
+          pnpm run build
 
       - name: upload build result
         uses: actions/upload-artifact@v2
@@ -55,7 +54,6 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      # check out repository code and setup node
       - uses: actions/checkout@v2
       - uses: pnpm/action-setup@646cdf48217256a3d0b80361c5a50727664284f2
         with:
@@ -70,12 +68,13 @@ jobs:
           name: bundle
           path: dist
 
-      - run: pnpm add -g semantic-release
-      - run: pnpm add -g @semantic-release/changelog
-      - run: pnpm add -g @semantic-release/git
-      - run: ls
-      - run: ls ./dist
-      - run: semantic-release
+      - name: release
+        run: |
+          pnpm add -g semantic-release
+          pnpm add -g @semantic-release/changelog
+          pnpm add -g @semantic-release/git
+          semantic-release
+
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
