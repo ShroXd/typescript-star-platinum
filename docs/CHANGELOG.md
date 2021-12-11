@@ -1,3 +1,10 @@
+## [2.4.1](https://github.com/ShroXd/typescript-star-platinum/compare/v2.4.0...v2.4.1) (2021-12-11)
+
+
+### Bug Fixes
+
+* 🐛 remove the third-party cache support for pnpm ([9ee46c0](https://github.com/ShroXd/typescript-star-platinum/commit/9ee46c048df4f740311ce698a90c81b97d62bfce))
+
 # [2.4.0](https://github.com/ShroXd/typescript-star-platinum/compare/v2.3.1...v2.4.0) (2021-12-11)
 
 
