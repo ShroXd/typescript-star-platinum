@@ -1,3 +1,10 @@
+# [2.2.0](https://github.com/ShroXd/typescript-star-platinum/compare/v2.1.0...v2.2.0) (2021-12-11)
+
+
+### Features
+
+* 🎸 break up the ci workflow ([9eb3830](https://github.com/ShroXd/typescript-star-platinum/commit/9eb3830ee1e655985d84db9b88ec6f8b9322215d))
+
 # [2.1.0](https://github.com/ShroXd/typescript-star-platinum/compare/v2.0.0...v2.1.0) (2021-12-11)
 
 
