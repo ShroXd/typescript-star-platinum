@@ -1,3 +1,10 @@
+# [2.3.0](https://github.com/ShroXd/typescript-star-platinum/compare/v2.2.1...v2.3.0) (2021-12-11)
+
+
+### Features
+
+* 🎸 add unit test stage for ci ([7b2eb66](https://github.com/ShroXd/typescript-star-platinum/commit/7b2eb66621cb3db8762e537dc9fe3bddc41d5732))
+
 ## [2.2.1](https://github.com/ShroXd/typescript-star-platinum/compare/v2.2.0...v2.2.1) (2021-12-11)
 
 # [2.2.0](https://github.com/ShroXd/typescript-star-platinum/compare/v2.1.0...v2.2.0) (2021-12-11)
