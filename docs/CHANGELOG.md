@@ -1,3 +1,10 @@
+# [2.1.0](https://github.com/ShroXd/typescript-star-platinum/compare/v2.0.0...v2.1.0) (2021-12-11)
+
+
+### Features
+
+* 🎸 release the builded result ([ad3a92e](https://github.com/ShroXd/typescript-star-platinum/commit/ad3a92ea8ef2fd539660b5e95546a5c6d4734c1a))
+
 # [2.0.0](https://github.com/ShroXd/typescript-star-platinum/compare/v1.0.1...v2.0.0) (2021-12-11)
 
 
