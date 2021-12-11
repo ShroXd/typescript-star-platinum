@@ -13,10 +13,13 @@ jobs:
       - uses: actions/checkout@v1
       - uses: actions/setup-node@v1
         with:
-          node-version: "14.x"
+          node-version: '14.x'
       # install dependencies and run semantic-release
       - run: npm i -g pnpm
       - run: pnpm i
+      - run: mkdir ./dist/
+      - run: cp -r package.json ./dist/
+      - run: pnpm run build
       - run: npx semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

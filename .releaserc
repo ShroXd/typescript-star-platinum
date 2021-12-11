@@ -64,13 +64,20 @@
       }
     ],
     [
+      "@semantic-release/npm",
+      {
+        "pkgRoot": "dist"
+      }
+    ],
+    [
       "@semantic-release/git",
       {
         "assets": [
-          "docs/CHANGELOG.md"
+          "docs/CHANGELOG.md",
+          "package.json",
+          "npm-shrinkwrap.json"
         ]
       }
-    ],
-    "@semantic-release/npm"
+    ]
   ]
 }
