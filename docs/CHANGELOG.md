@@ -1,3 +1,10 @@
+## [2.3.1](https://github.com/ShroXd/typescript-star-platinum/compare/v2.3.0...v2.3.1) (2021-12-11)
+
+
+### Bug Fixes
+
+* 🐛 should not change the version in release commit ([adeb67b](https://github.com/ShroXd/typescript-star-platinum/commit/adeb67bf752fd8419a30ea695b42f84a8306f074))
+
 # [2.3.0](https://github.com/ShroXd/typescript-star-platinum/compare/v2.2.1...v2.3.0) (2021-12-11)
 
 
