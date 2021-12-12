@@ -19,7 +19,7 @@ TypeScript Star Platinum is a template that allows you to quickly develop TypeSc
 - Modern package management with [pnpm](https://github.com/pnpm/pnpm)
 - Bundle library with [tsup](https://github.com/egoist/tsup)
 - _Fast_ unit test with [jest](https://github.com/facebook/jest)
-- Release with [semantic-release]()
+- Release with [semantic-release](https://github.com/semantic-release/semantic-release)
 - CI/CD with [GitHub Action](https://docs.github.com/en/actions)
 
 ## License
