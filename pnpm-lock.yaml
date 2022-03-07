@@ -6,7 +6,7 @@ specifiers:
   '@typescript-eslint/eslint-plugin': 5.6.0
   '@typescript-eslint/parser': 5.6.0
   eslint: 8.4.1
-  eslint-config-prettier: 8.3.0
+  eslint-config-prettier: 8.5.0
   husky: 7.0.4
   jest: 27.4.4
   lint-staged: 12.1.2
@@ -22,7 +22,7 @@ devDependencies:
   '@typescript-eslint/eslint-plugin': 5.6.0_0d0cecf582ba45923647a091322795b0
   '@typescript-eslint/parser': 5.6.0_eslint@8.4.1+typescript@4.5.3
   eslint: 8.4.1
-  eslint-config-prettier: 8.3.0_eslint@8.4.1
+  eslint-config-prettier: 8.5.0_eslint@8.4.1
   husky: 7.0.4
   jest: 27.4.4
   lint-staged: 12.1.2
@@ -2047,8 +2047,8 @@ packages:
       source-map: 0.6.1
     dev: true
 
-  /eslint-config-prettier/8.3.0_eslint@8.4.1:
-    resolution: {integrity: sha512-BgZuLUSeKzvlL/VUjx/Yb787VQ26RU3gGjA3iiFvdsp/2bMfVIWUVP7tjxtjS0e+HP409cPlPvNkQloz8C91ew==}
+  /eslint-config-prettier/8.5.0_eslint@8.4.1:
+    resolution: {integrity: sha512-obmWKLUNCnhtQRKc+tmnYuQl0pFU1ibYJQ5BGhTVB08bHe9wC8qUeG7c08dj9XX+AuPj1YSGSQIHl1pnDHZR0Q==}
     hasBin: true
     peerDependencies:
       eslint: '>=7.0.0'
